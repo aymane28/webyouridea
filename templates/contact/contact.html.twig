@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WebMyIdea | Contact
+{% endblock %}
+
+{% block body %}
+	<section>
+		<div class="container-fluid my-5">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-md-9 col-lg-6 col-xl-5">
+					<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image">
+				</div>
+				<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+					<div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+						<h4 class="fw-normal mb-5">Faisons du bruit
+							<span class="third-background-color rounded">ensemble !</span>
+						</h4>
+					</div>
+					{% for message in app.flashes('success') %}
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+							{{ message }}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					{% endfor %}
+					{{ form_start(form) }}
+
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-outline mb-3">
+								<label class="form-label" for="form3Example3">Nom*</label>
+								{{ form_widget(form.first_name, {'attr': {'class': 'form-control form-control-lg'}}) }}
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-outline mb-3">
+								<label class="form-label" for="form3Example3">Prénom*</label>
+								{{ form_widget(form.last_name, {'attr': {'class': 'form-control form-control-lg'}}) }}
+							</div>
+						</div>
+					</div>
+
+					<div class="row my-2">
+						<div class="col-md-6">
+							<div class="form-outline mb-3">
+								<label class="form-label" for="form3Example3">Email*</label>
+								{{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg'}}) }}
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-outline mb-3">
+								<label class="form-label" for="form3Example3">Numéro de téléphone</label>
+								{{ form_widget(form.phone_number, {'attr': {'class': 'form-control form-control-lg'}}) }}
+							</div>
+						</div>
+					</div>
+
+					<div class="form-outline mb-4">
+						<label class="form-label" for="form3Example4">Message (facultatif)</label>
+						{{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'maxwidth': '10', 'placeholder': 'Vous pouvez préciser votre demande ici'}}) }}
+					</div>
+
+					<div class="text-center text-lg-start pt-2">
+						{{ form_widget(form.save, {'label': 'Envoyer', 'attr': {'class': 'btn main-button btn-lg', 'style': 'padding-left: 2.5rem; padding-right: 2.5rem;'}}) }}
+					</div>
+
+					{{ form_end(form) }}
+
+					<div class="text-center mt-5">
+						<hr class="seperator"/>
+						<a title="Twitter" class="btn primary-background-color button-social-media text-white rounded-pill mt-3 btn-floating" role="button">
+							<i class="bi bi-twitter-x"></i>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}

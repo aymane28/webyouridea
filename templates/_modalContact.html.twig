@@ -1,0 +1,55 @@
+<div class="modal fade" id="modalContact" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h1 class="modal-title fs-5" id="staticBackdropLabel">Valider votre formule :
+					<span class="offer-choice primary-color"></span>
+				</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				{{ form_start(form) }}
+				<div class="row">
+					{{ form_widget(form.formula) }}
+					<div class="col-md-6">
+						<div class="form-outline mb-3">
+							<label class="form-label" for="form3Example3">Nom*</label>
+							{{ form_widget(form.first_name, {'attr': {'class': 'form-control form-control-lg'}}) }}
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-outline mb-3">
+							<label class="form-label" for="form3Example3">Prénom*</label>
+							{{ form_widget(form.last_name, {'attr': {'class': 'form-control form-control-lg'}}) }}
+						</div>
+					</div>
+				</div>
+
+				<div class="row my-2">
+					<div class="col-md-6">
+						<div class="form-outline mb-3">
+							<label class="form-label" for="form3Example3">Email*</label>
+							{{ form_widget(form.email, {'attr': {'class': 'form-control form-control-lg'}}) }}
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-outline mb-3">
+							<label class="form-label" for="form3Example3">Numéro de téléphone</label>
+							{{ form_widget(form.phone_number, {'attr': {'class': 'form-control form-control-lg'}}) }}
+						</div>
+					</div>
+				</div>
+
+				<div class="form-outline mb-4">
+					<label class="form-label" for="form3Example4">Message (facultatif)</label>
+					{{ form_widget(form.message, {'attr': {'class': 'form-control form-control-lg', 'placeholder': 'Vous pouvez préciser votre demande ici'}}) }}
+				</div>
+
+				<div class="modal-footer">
+					{{ form_widget(form.save, {'label': 'Valider', 'attr': {'class': 'btn main-button'}}) }}
+				</div>
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+</div></div>

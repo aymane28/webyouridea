@@ -1,0 +1,132 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WebMyIdea | Nos services
+{% endblock %}
+
+{% block body %}
+	<div
+		class="container services my-5" id="services">
+		<!--  Section Title -->
+		<div class="text-center mb-5" data-aos="fade-up">
+			<h2>Nos Services</h2>
+			<p>Découvrez nos offres spécialisées pour répondre à vos besoins. Nous sommes là pour vous aider à atteindre vos objectifs grâce à nos services de qualité.</p>
+		</div>
+		<!-- End Section Title -->
+		<!--
+																														<div class="container">
+																															<div class="row gy-4">
+																																<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+																																	<div class="service-item d-flex">
+																																		<div class="icon flex-shrink-0">
+																																			<i class="bi bi-briefcase"></i>
+																																		</div>
+																																		<div>
+																																			<h4 class="title">
+																																				<a href="services-details.html" class="stretched-link">Développement sites & applications web</a>
+																																			</h4>
+																																			<p class="description">Des solutions sur mesure pour vos besoins en développement web. Expérience utilisateur optimale garantie.</p>
+																																		</div>
+																																	</div>
+																																</div>
+																												
+																																<div class="col-lg-6 " data-aos="fade-up" data-aos-delay="200">
+																																	<div class="service-item d-flex">
+																																		<div class="icon flex-shrink-0">
+																																			<i class="bi bi-card-checklist"></i>
+																																		</div>
+																																		<div>
+																																			<h4 class="title">
+																																				<a href="services-details.html" class="stretched-link">Cours de développement web</a>
+																																			</h4>
+																																			<p class="description">Des cours interactifs et pratiques pour maîtriser les fondamentaux et les dernières technologies du développement web. Apprenez en travaillant sur des projets réels.</p>
+																																		</div>
+																																	</div>
+																																</div>
+																												
+																																<div class="col-lg-6 " data-aos="fade-up" data-aos-delay="300">
+																																	<div class="service-item d-flex">
+																																		<div class="icon flex-shrink-0">
+																																			<i class="bi bi-bar-chart"></i>
+																																		</div>
+																																		<div>
+																																			<h4 class="title">
+																																				<a href="services-details.html" class="stretched-link">Maintenance de vos sites</a>
+																																			</h4>
+																																			<p class="description">Assurez la stabilité et la performance de vos sites web grâce à nos services de maintenance. Des solutions personnalisées pour répondre à vos besoins spécifiques.</p>
+																																		</div>
+																																	</div>
+																																</div>
+																															</div>
+																														</div>
+																														-->
+
+
+		<div class="row gy-4 my-5">
+			<div class="card col mb-3" data-aos="fade-up" data-aos-delay="100">
+				<div class="service-item d-flex">
+					<div class="icon flex-shrink-0">
+						<i class="bi bi-briefcase"></i>
+					</div>
+					<div>
+						<h4 class="title">
+							<a href="{{ path('formulas') }}" class="stretched-link secondary-color">
+								<u>Développement sites & applications web</u>
+							</a>
+						</h4>
+						<p>Des solutions sur mesure pour vos besoins en développement web. Expérience utilisateur optimale garantie.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col mb-3" data-aos="fade-up" data-aos-delay="200">
+				<div class="service-item d-flex">
+					<div class="icon flex-shrink-0">
+						<i class="bi bi-card-checklist"></i>
+					</div>
+					<div>
+						<h4 class="title">
+							<a href="{{ path('contact') }}" class="stretched-link secondary-color">
+								<u>Cours de développement web</u>
+							</a>
+						</h4>
+						<p>Des cours interactifs et pratiques pour maîtriser les fondamentaux et les dernières technologies du développement web. Apprenez en travaillant sur des projets réels.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card col mb-3" data-aos="fade-up" data-aos-delay="300">
+				<div class="service-item d-flex">
+					<div class="icon flex-shrink-0">
+						<i class="bi bi-bar-chart"></i>
+					</div>
+					<div>
+						<h4 class="title">
+							<a href="{{ path('subscriptions') }}" class="stretched-link secondary-color">
+								<u>Maintenance de vos sites</u>
+							</a>
+						</h4>
+						<p>Assurez la stabilité et la performance de vos sites web grâce à nos services de maintenance. Des solutions personnalisées pour répondre à vos besoins spécifiques.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row gy-4">
+			<div class="text-center mb-5" data-aos="fade-up">
+				<h4 class="mb-4">Est-ce qu’un site web est adapté pour mon besoin ?</h2>
+				<p>Un site internet est un levier de visibilité incontournable pour n’importe quelle entreprise. Vous pourrez ainsi travailler votre image de marque, gérer votre réputation en ligne, changer votre cible marketing, fidéliser votre clientèle et  améliorer votre relation client.</p>
+			</div>
+		</div>
+
+		<div class="row gy-4">
+			<div class="text-center mb-5" data-aos="fade-up">
+				<h6 class="mb-4 fw-secondary">Vous avez des objectifs en tête ?</h2>
+				<a href="{{ path('contact') }}" class="btn main-button btn-lg" type="button">
+					Faisons du bruit ensemble
+					<i class="bi bi-chevron-right"></i>
+				</a>
+			</div>
+		</div>
+
+	</div>
+{% endblock %}

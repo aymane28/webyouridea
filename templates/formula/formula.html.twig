@@ -1,0 +1,246 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}WebMyIdea | Nos formules
+{% endblock %}
+
+{% block body %}
+	{% include '_modalContact.html.twig' %}
+	<section class="section my-5" id="pricing">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					{% for message in app.flashes('success') %}
+						<div class="alert alert-success alert-dismissible fade show" role="alert">
+							{{ message }}
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+					{% endfor %}
+					<div class="title-box text-center">
+						<div class="d-flex align-items-center justify-content-center">
+							<h3 class="title-heading">Nos formules</h3>
+						</div>
+						<p class="text-muted f-17 mt-2">Sélectionnez la formule qui vous convient afin que nous puissions traiter votre demande</p>
+						<p class="text-muted f-17 mt-2">Pour la moindre question
+							<a class="secondary-color" href="{{ path('contact') }}">contactez nous<a></p>
+							</div>
+						</p>
+					</div>
+				</div>
+
+				<div class="row d-flex justify-content-center">
+					<div class="col-lg-4 mb-5 mt-3">
+						<div class="pricing-box shadow-lg">
+							<div class="pricing-badge">
+								<span class="badge">Promotion</span>
+							</div>
+							<i class="mdi mdi-account-multiple h1 text-dark"></i>
+							<h4 class="f-20 text-dark">Standard</h4>
+							<div class="mt-3 pt-2">
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Maquette et design</b>
+									(comprenant le code couleur, l'agencement et la mise en page du site)</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Site web responsive</b>
+									(compatible pour tout
+																																																																																																																																																																																																																																																																																											type d'appareil)
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Logo</b>
+									customisé</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Email</b>
+									automatisé partiellement</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Expérience utilisateur</b>
+									respectée
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Fonctionnalités</b>
+									basiques</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Maintenance</b>
+									offerte pendant 2 semaines
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Sécurisation</b>
+									respectée</p>
+							</div>
+							<div class="pricing-plan mt-3 pt-2">
+								<h4 class="text-muted">
+									<span class="plan pl-3 text-dark">à partir de 249€
+									</span>
+								</h4>
+							</div>
+							<div class="mt-3 pt-3">
+								<a class="btn main-button btn-rounded" data-bs-toggle="modal" data-bs-target="#modalContact" data-offre="Standard">Choisir</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 mb-5 mt-3">
+						<div class="pricing-box shadow-lg">
+							<img class="image-noel" src="{{ asset('img/bonnet-noel.png') }}" width="60" height="80"/>
+							<i class="mdi mdi-account-multiple h1 text-dark"></i>
+							<h4 class="f-20 text-dark">Standard +</h4>
+							<div class="mt-3 pt-2">
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Maquette et design</b>
+									(comprenant le code couleur, l'agencement et la mise en page du site)</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Site web responsive</b>
+									(compatible pour tout type d'appareil)
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Logo</b>
+									customisé</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Email</b>
+									automatisé totalement</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Expérience utilisateur</b>
+									avancée
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Fonctionnalités</b>
+									avancées</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Maintenance</b>
+									pendant 1 mois
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Analyse approfondie</b>
+									des besoins</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>1</b>
+									Compte Admin</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Sécurisation</b>
+									principale</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Intégration de contenu
+									</b>
+									(mise en forme, illustration des contenus de chaque page)</p>
+							</div>
+							<p class="mt-4 pt-2 text-muted">Notre offre la plus populaire
+							</p>
+							<div class="pricing-plan mt-3 pt-2">
+								<h4 class="text-muted">
+									<span class="plan pl-3 text-dark">à partir de 349€
+									</span>
+								</h4>
+							</div>
+							<div class="mt-3 pt-3">
+								<a class="btn main-button btn-rounded" data-bs-toggle="modal" data-bs-target="#modalContact" data-offre="Standard +">Choisir</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 mb-5 mt-3">
+						<div class="pricing-box shadow-lg">
+							<i class="mdi mdi-account-multiple h1 text-dark"></i>
+							<h4 class="f-20 text-dark">Premium</h4>
+							<div class="mt-3 pt-2">
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Maquette et design</b>
+									(comprenant le code
+																																																																																																																																																																											couleur,
+																																																																																																																																																																											l’agencement et la
+																																																																																																																																																																											mise en page du
+																																																																																																																																																																											site)</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Site web responsive</b>
+									(compatible pour tout type d'appareil)
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Logo</b>
+									customisé</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Email</b>
+									automatisé totalement</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Expérience utilisateur</b>
+									avancée
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Fonctionnalités</b>
+									très avancées</p>
+								<p class="mb-2">
+									<i class="mdi mdi-close-circle text-danger f-18 mr-2"></i>
+									<b>Maintenance</b>
+									pendant 2 mois
+								</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Analyse approfondie</b>
+									des besoins</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>1</b>
+									Compte Admin</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Sécurisation</b>
+									avancée</p>
+								<p class="mb-2">
+									<i class="mdi mdi-checkbox-marked-circle text-success f-18 mr-2"></i>
+									<b>Intégration de contenu
+									</b>
+									(mise en forme, illustration des contenus de chaque page)</p>
+							</div>
+							<div class="pricing-plan mt-3 pt-2">
+								<h4 class="text-muted">
+									<span class="plan pl-3 text-dark">à partir de 499€
+									</span>
+								</h4>
+							</div>
+							<div class="mt-3 pt-3">
+								<a class="btn main-button btn-rounded" data-bs-toggle="modal" data-bs-target="#modalContact" data-offre="Premium">Choisir</a>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex">
+						<img class="me-3" src="{{ asset('img/cadeau-noel.png') }}" width="100" height="120"/>
+						<h6 class="mb-2 f-16">Pour toutes nos formules:
+						</p>
+						<p class="text-muted">Toute fonctionnalité supplémentaire sera facturée.</p>
+						<p class="text-muted">Aucune formule ne comprend d'abonnement à un hébergeur. Néanmoins, nous rechercherons pour vous parmis le meilleur hébergeur sur le marché. Tout référencement et hébergement sera également facturé.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock %}
+
+	{% block javascripts %}
+		{{ parent() }}
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+updateModalContent();
+});
+		</script>
+	{% endblock %}
